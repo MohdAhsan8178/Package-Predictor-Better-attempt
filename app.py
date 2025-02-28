@@ -48,15 +48,15 @@ def set_bg(image_url):
         st.error("Failed to load background image.")
 
 # Set the background image (Use RAW GitHub link)
-set_bg("https://raw.githubusercontent.com/MohdAhsan8178/Package-Predictor-Better-attempt/main/background.jpg")
+set_bg("https://github.com/MohdAhsan8178/Package-Predictor-Better-attempt/blob/main/background.jpg?raw=true")
 
 # Title and subtitle
-st.markdown("<h1 style='text-align: center;'>📊 Placement Package Prediction</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'> Placement Package Prediction</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center;'>Enter your CGPA and get your estimated package!</h3>", unsafe_allow_html=True)
 
 # Sidebar for logo dropdown
 with st.sidebar:
-    logo_url = "https://raw.githubusercontent.com/MohdAhsan8178/Package-Predictor-Better-attempt/main/logo.png"  # Change this to your actual logo URL
+    logo_url = "https://github.com/MohdAhsan8178/Package-Predictor-Better-attempt/blob/main/unnamed.jpg?raw=true"  # Change this to your actual logo URL
     st.image(logo_url, width=100, use_column_width=False)
     if st.button("🔻 More Info"):
         st.markdown("### Mohd Ahsan")
