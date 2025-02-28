@@ -15,7 +15,7 @@ st.markdown(
     <style>
     * { font-family: 'Poppins', sans-serif; }
     .stApp {
-        background: url("https://raw.githubusercontent.com/yourusername/repo/main/background.jpg") no-repeat center center fixed;
+        background: url("https://github.com/MohdAhsan8178/Package-Predictor-Better-attempt/blob/main/background.jpg?raw=true") no-repeat center center fixed;
         background-size: cover;
     }
     .title {
@@ -50,7 +50,7 @@ col1, col2 = st.columns([2, 1])
 with col1:
     cgpa_input = st.number_input("Enter CGPA", max_value=10.0, min_value=0.0, step=0.1)
 with col2:
-    st.image("https://raw.githubusercontent.com/yourusername/repo/main/logo.png", width=100)
+    st.image("https://github.com/MohdAhsan8178/Package-Predictor-Better-attempt/blob/main/unnamed.jpg?raw=true", width=100)
 
 # Predict Button with Progress Animation
 if st.button("Predict"):
@@ -64,10 +64,10 @@ if st.button("Predict"):
 st.markdown(
     """
     <p style='text-align: center;'>
-        <a href="https://github.com/yourusername" target="_blank">
+        <a href="https://github.com/MohdAhsan8178" target="_blank">
             <img src="https://img.icons8.com/material-rounded/48/github.png" width="30px">
         </a>
-        <a href="https://www.linkedin.com/in/yourname" target="_blank">
+        <a href="https://www.linkedin.com/in/mohd-ahsan8178/">
             <img src="https://img.icons8.com/material-rounded/48/linkedin.png" width="30px">
         </a>
     </p>
