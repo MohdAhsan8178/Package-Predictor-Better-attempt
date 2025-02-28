@@ -8,7 +8,7 @@ model = load("model.pkl")
 # Function to set background from URL (Updated)
 def set_bg(image_url):
     st.markdown(
-        f
+        f"""
         <style>
         .stApp {{
             background: url("{image_url}") no-repeat center center fixed;
@@ -18,7 +18,7 @@ def set_bg(image_url):
         }}
         .result-box {{
             background-color: rgba(50, 0, 100, 0.8);
-            padding: 10px;
+            padding: 10px;  /* Fixed padding syntax */
             border-radius: 10px;
             text-align: center;
             color: magenta;
@@ -30,7 +30,7 @@ def set_bg(image_url):
             transform: scale(1.05);
         }}
         </style>
-        ,
+        """,
         unsafe_allow_html=True
     )
 
