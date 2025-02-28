@@ -8,7 +8,7 @@ model = load("model.pkl")
 # Function to set background from URL (Updated)
 def set_bg(image_url):
     st.markdown(
-        f"""
+    
         <style>
         .stApp {{
             background: url("{image_url}") no-repeat center center fixed;
