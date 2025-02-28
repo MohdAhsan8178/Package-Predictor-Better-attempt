@@ -5,50 +5,44 @@ from joblib import load
 # Load the trained model
 model = load("model.pkl")
 
-# Function to set background from URL
+# Function to set background from URL (Updated)
 def set_bg(image_url):
-    response = requests.get(image_url)
-    if response.status_code == 200:
-        with open("background.jpg", "wb") as img_file:
-            img_file.write(response.content)
-        st.markdown(
-            """
-            <style>
-            .stApp {
-                background: url("background.jpg") no-repeat center center fixed;
-                background-size: cover;
-                color: white;
-                font-family: 'Arial', sans-serif;
-            }
-            .result-box {
-                background-color: rgba(50, 0, 100, 0.8);
-                padding: 10px;
-                border-radius: 10px;
-                text-align: center;
-                color: magenta;
-                font-size: 24px;
-                font-weight: bold;
-                transition: all 0.3s ease-in-out;
-            }
-            .result-box:hover {
-                transform: scale(1.05);
-            }
-            .logo-dropdown {
-                cursor: pointer;
-                transition: transform 0.3s ease;
-            }
-            .logo-dropdown:hover {
-                transform: scale(1.1);
-            }
-            </style>
-            """,
-            unsafe_allow_html=True
-        )
-    else:
-        st.error("Failed to load background image.")
+    st.markdown(
+        f"""
+        <style>
+        .stApp {{
+            background: url("{image_url}") no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: 'Arial', sans-serif;
+        }}
+        .result-box {{
+            background-color: rgba(50, 0, 100, 0.8);
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            color: magenta;
+            font-size: 24px;
+            font-weight: bold;
+            transition: all 0.3s ease-in-out;
+        }}
+        .result-box:hover {{
+            transform: scale(1.05);
+        }}
+        .logo-dropdown {{
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }}
+        .logo-dropdown:hover {{
+            transform: scale(1.1);
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
 # Set the background image (Use RAW GitHub link)
-set_bg("https://github.com/MohdAhsan8178/Package-Predictor-Better-attempt/blob/main/background.jpg?raw=true")
+set_bg("https://raw.githubusercontent.com/MohdAhsan8178/Package-Predictor-Better-attempt/main/background.jpg")
 
 # Title and subtitle
 st.markdown("<h1 style='text-align: center;'> Placement Package Prediction</h1>", unsafe_allow_html=True)
@@ -56,7 +50,7 @@ st.markdown("<h3 style='text-align: center;'>Enter your CGPA and get your estima
 
 # Sidebar for logo dropdown
 with st.sidebar:
-    logo_url = "https://github.com/MohdAhsan8178/Package-Predictor-Better-attempt/blob/main/unnamed.jpg?raw=true"  # Change this to your actual logo URL
+    logo_url = "https://raw.githubusercontent.com/MohdAhsan8178/Package-Predictor-Better-attempt/main/unnamed.jpg"  # Change this to your actual logo URL
     st.image(logo_url, width=100, use_column_width=False)
     if st.button("🔻 More Info"):
         st.markdown("### Mohd Ahsan")
