@@ -29,17 +29,9 @@ def set_bg(image_url):
         .result-box:hover {{
             transform: scale(1.05);
         }}
-        .logo-dropdown {{
-            cursor: pointer;
-            transition: transform 0.3s ease;
-        }}
-        .logo-dropdown:hover {{
-            transform: scale(1.1);
-        }}
         </style>
-        """,
+
         unsafe_allow_html=True
-    )
 
 # Set the background image (Use RAW GitHub link)
 set_bg("https://raw.githubusercontent.com/MohdAhsan8178/Package-Predictor-Better-attempt/main/background.jpg")
@@ -47,15 +39,6 @@ set_bg("https://raw.githubusercontent.com/MohdAhsan8178/Package-Predictor-Better
 # Title and subtitle
 st.markdown("<h1 style='text-align: center;'> Placement Package Prediction</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center;'>Enter your CGPA and get your estimated package!</h3>", unsafe_allow_html=True)
-
-# Sidebar for logo dropdown
-with st.sidebar:
-    logo_url = "https://raw.githubusercontent.com/MohdAhsan8178/Package-Predictor-Better-attempt/main/unnamed.jpg"  # Change this to your actual logo URL
-    st.image(logo_url, width=100, use_column_width=False)
-    if st.button("🔻 More Info"):
-        st.markdown("### Mohd Ahsan")
-        st.markdown("[GitHub](https://github.com/MohdAhsan8178)")
-        st.markdown("[LinkedIn](https://www.linkedin.com/in/mohd-ahsan)")
 
 # Input box for CGPA
 cgpa = st.slider("Enter CGPA", min_value=0.0, max_value=10.0, value=7.0, step=0.1)
